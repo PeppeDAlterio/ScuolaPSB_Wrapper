@@ -1,0 +1,26 @@
+{
+  "name": "scuolapsb_wrapper",
+  "version": "1.0.0",
+  "description": "ScuolaPSBWrapper",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PeppeDAlterio/ScuolaPSB_Wrapper.git"
+  },
+  "author": "Giuseppe D'Alterio",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PeppeDAlterio/ScuolaPSB_Wrapper/issues"
+  },
+  "homepage": "https://github.com/PeppeDAlterio/ScuolaPSB_Wrapper#readme",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.2",
+    "ejs": "^2.6.1",
+    "express": "^4.16.3",
+    "request": "^2.88.0"
+  }
+}
