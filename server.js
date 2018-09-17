@@ -12,7 +12,7 @@ app.set('view engine', 'ejs');
 
 app.get('/', function(req, res) {
 
-  res.render('template', {title: "UniNA Scuola PSB Wraper", data: "Benvenuto, utilizza il menu' laterale per accedere ai contenuti"});
+  res.render('template', {title: "UniNA Scuola PSB Wrapper", data: "Benvenuto, utilizza il menu' laterale per accedere ai contenuti"});
 
 });
 
