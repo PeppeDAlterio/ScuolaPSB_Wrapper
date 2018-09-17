@@ -4,13 +4,15 @@ var cheerio = require('cheerio');
 var express = require('express');
 var app = express();
 
+app.use('/css', express.static('views/css'));
+
 var SERVER_PORT = 12345;
 
 app.set('view engine', 'ejs');
 
 app.get('/', function(req, res) {
 
-  res.render('template', {data: "Benvenuto, utilizza il menu' laterale per accedere ai contenuti"});
+  res.render('template', {title: "UniNA Scuola PSB Wraper", data: "Benvenuto, utilizza il menu' laterale per accedere ai contenuti"});
 
 });
 
@@ -24,7 +26,7 @@ app.get('/ingegneria', function(req, res) {
     var $ = cheerio.load(body);
     var cdl = $("body");
 
-    res.render('template', {data: cdl});
+    res.render('template', {title: "Collegio Ingegneria", data: cdl});
 
   });
 
@@ -40,7 +42,7 @@ app.get('/scienze', function(req, res) {
     var $ = cheerio.load(body);
     var cdl = $("body");
 
-    res.render('template', {data: cdl});
+    res.render('template', {title: "Collegio Scienze", data: cdl});
 
   });
 
@@ -56,7 +58,7 @@ app.get('/architettura', function(req, res) {
     var $ = cheerio.load(body);
     var cdl = $("body");
 
-    res.render('template', {data: cdl});
+    res.render('template', {title: "Collegio Architettura", data: cdl});
 
   });
 
@@ -71,15 +73,13 @@ app.get('/news', function(req, res) {
 
     var $ = cheerio.load(body);
 
-    $('a').each(function( index ) {
-      console.log( index + ": " + $( this ).attr('href') );
-      $(this).attr('href', 'http://www.scuolapsb.unina.it'+$(this).attr('href'));
-      console.log( 'NEW' + index + ": " + $( this ).attr('href') );
-    });
-
     var news = $("#fc_items-99-9");
 
-    res.render('template', {data: "<div>"+news+"</div>"});
+    $('a').each(function( index ) {
+      $(this).attr('href', 'http://www.scuolapsb.unina.it'+$(this).attr('href'));
+    });
+
+    res.render('template', {title: "News dalla Scuola", data: "<div>"+news+"</div>"});
   });
 
 });

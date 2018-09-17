@@ -1,0 +1,50 @@
+body {
+  margin: 0px;
+  padding: 0px;
+  font-family: 'Trebuchet MS',verdana;
+}
+
+table.steelBlueCols {
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  border: 4px solid #555555;
+  width: 100%;
+  text-align: center;
+  border-collapse: collapse;
+}
+
+table.steelBlueCols td, table.steelBlueCols th {
+  border: 1px solid #555555;
+  padding: 5px 10px;
+}
+
+table.steelBlueCols tbody td {
+  font-size: 12px;
+  font-weight: bold;
+  background: #999f8e;
+}
+
+table.steelBlueCols tbody td.middletd {
+  font-size: 12px;
+  font-weight: bold;
+  background: #d2d8c7;
+}
+
+table.steelBlueCols tfoot td {
+  font-size: 13px;
+}
+
+table.steelBlueCols tfoot .links {
+  text-align: right;
+}
+
+table.steelBlueCols tfoot .links a{
+  display: inline-block;
+  background: #FFFFFF;
+  color: #398AA4;
+  padding: 2px 8px;
+  border-radius: 5px;
+}
+
+ul.navul {
+  display: inline-block;
+}
